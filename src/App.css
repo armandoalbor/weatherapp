@@ -14,6 +14,7 @@
   color: white;
 }
 
+
 .App-title {
   font-size: 1.5em;
 }
@@ -25,4 +26,18 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.weather-detail {
+    background-color: #FFF;
+    height: 90vh;
+    width: calc(100% - 40px);
+    overflow: auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 64em) {
+    .weather-detail {
+        height: 40vh;
+    }
 }

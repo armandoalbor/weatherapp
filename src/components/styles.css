@@ -1,0 +1,40 @@
+.weather-location-container {
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin: 0 5px 0 5px;
+    font-family: Roboto, sans-serif;
+    cursor: pointer;
+
+    -webkit-box-shadow: 10px 24px 44px -13px rgba(125,125,125,1);
+    -moz-box-shadow: 10px 24px 44px -13px rgba(125,125,125,1);
+    box-shadow: 10px 24px 44px -13px rgba(125,125,125,1);
+}
+
+.location {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background-color: #086ea6;
+    color: white;
+    text-align: center;
+}
+
+.location-list {
+    height: 90vh;
+    overflow: auto;
+    width: 100%;
+}
+
+.forecast-title {
+    color: #0a87cb;
+    text-align: center;
+    padding: 0 15px;
+}
+
+@media (max-width: 64em) {
+    .location-list {
+        overflow: auto;
+        max-height: 40vh;
+        margin-bottom: 20px;
+    }
+}

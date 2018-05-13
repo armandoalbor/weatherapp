@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles.css';
 
 const Location = ({ city }) => (
-        <div>
-            <h1>{city}</h1>
+        <div className={'location'}>
+            <h2>{city}</h2>
         </div>
 );
 

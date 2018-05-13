@@ -1,0 +1,39 @@
+.weather-data-container {
+    background-color: #eee;
+    border-radius: 5px;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+}
+.weather-temperature-container {
+    width: 60%;
+    display: inline-block;
+}
+
+.weather-temperature-container .icon {
+    color: #0a87cb;
+}
+
+.weather-temperature-container .temperature {
+    font-size: 35px;
+    font-weight: bold;
+    padding-left: 20px;
+    color: #333333;
+}
+
+.weather-temperature-container .type {
+    font-size: 18px;
+    font-weight: bold;
+    color: #474747;
+}
+
+.weather-extra-info-container {
+    width: 40%;
+    display: inline-block;
+    line-height: 25px;
+    text-align: left;
+}
+
+.weather-extra-info-container span {
+    display: block;
+}
