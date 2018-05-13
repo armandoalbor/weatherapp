@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -10,6 +12,8 @@ import 'weather-icons/css/weather-icons.css';
 
 import LocationList from './components/LocationList';
 import ForecastExtended from './components/ForecastExtended';
+
+import { setCity } from './actions';
 import './App.css';
 
 const cities = ["Dubai,ae", "Cancun,mx", "Ciudad Nezahualcoyotl,mx", "Texcoco de Mora,mx", "Ixtapaluca,mx", "Iztapalapa,mx"];
@@ -37,6 +41,8 @@ class App extends Component {
     handleSelectedLocation = city => {
         this.setState({ city });
         console.log("handleSelectedLocation / " + city);
+
+        this.props.setCity(city);
     };
 
     render() {
@@ -73,4 +79,18 @@ class App extends Component {
     }
 }
 
-export default App;
+App.propTypes = {
+    setCity: PropTypes.func.isRequired
+};
+
+const mapDispatchToPropsActions = dispatch => ({
+    setCity: value => dispatch(setCity(value))
+});
+
+export default connect(null, mapDispatchToPropsActions)(App);
+
+/*
+const AppConnected = connect(null, mapDispatchToPropsActions)(App);
+export default AppConnected;
+*/
+
